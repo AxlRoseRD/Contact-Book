@@ -29,10 +29,17 @@ namespace Presentation_Layer.Formularios
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // SearchContact
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "SearchContact";
+            this.ClientSize = new System.Drawing.Size(389, 441);
+            this.Name = "SearchContact";
+            this.Text = "Search Contact";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

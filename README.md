@@ -6,7 +6,7 @@ the objetive of this aplication is:
 - search contacts.
 - update contacts.
 
-enter for users
+enter By users
 
 
 # Package NuGets

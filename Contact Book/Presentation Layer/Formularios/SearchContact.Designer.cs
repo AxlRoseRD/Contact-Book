@@ -29,13 +29,16 @@ namespace Presentation_Layer.Formularios
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.tablaDatos = new System.Windows.Forms.DataGridView();
+            this.tablaDatos = new System.Windows.Forms.DataGridView();           
+            this.contactBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contactBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -83,13 +86,16 @@ namespace Presentation_Layer.Formularios
             // 
             // tablaDatos
             // 
+            this.tablaDatos.AllowUserToDeleteRows = false;
             this.tablaDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tablaDatos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tablaDatos.Location = new System.Drawing.Point(0, 49);
             this.tablaDatos.Name = "tablaDatos";
+            this.tablaDatos.ReadOnly = true;
             this.tablaDatos.Size = new System.Drawing.Size(389, 359);
             this.tablaDatos.TabIndex = 2;
-            // 
+            this.tablaDatos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaDatos_CellDoubleClick);
+                        
             // SearchContact
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -101,9 +107,11 @@ namespace Presentation_Layer.Formularios
             this.Controls.Add(this.panel1);
             this.Name = "SearchContact";
             this.Text = "Search Contact";
+            this.Load += new System.EventHandler(this.SearchContact_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaDatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaDatos)).EndInit();            
+            ((System.ComponentModel.ISupportInitialize)(this.contactBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -113,7 +121,8 @@ namespace Presentation_Layer.Formularios
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView tablaDatos;
         private FontAwesome.Sharp.IconButton btnBuscar;
+        private System.Windows.Forms.DataGridView tablaDatos;      
+        private System.Windows.Forms.BindingSource contactBindingSource;        
     }
 }

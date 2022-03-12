@@ -38,13 +38,13 @@ namespace Presentation_Layer
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.btnMinimizar = new System.Windows.Forms.Button();
+            this.btnMaximizar = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.labelTitleChildForm = new System.Windows.Forms.Label();
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.btnCerrar = new System.Windows.Forms.Button();
-            this.btnMaximizar = new System.Windows.Forms.Button();
-            this.btnMinimizar = new System.Windows.Forms.Button();
             this.panelIzquierdo.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -169,6 +169,45 @@ namespace Presentation_Layer
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimizar.FlatAppearance.BorderSize = 0;
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMinimizar.Location = new System.Drawing.Point(303, 5);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(29, 23);
+            this.btnMinimizar.TabIndex = 5;
+            this.btnMinimizar.Text = "_";
+            this.btnMinimizar.UseVisualStyleBackColor = true;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // btnMaximizar
+            // 
+            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximizar.FlatAppearance.BorderSize = 0;
+            this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMaximizar.Location = new System.Drawing.Point(338, 5);
+            this.btnMaximizar.Name = "btnMaximizar";
+            this.btnMaximizar.Size = new System.Drawing.Size(29, 23);
+            this.btnMaximizar.TabIndex = 4;
+            this.btnMaximizar.Text = "■";
+            this.btnMaximizar.UseVisualStyleBackColor = true;
+            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCerrar.Location = new System.Drawing.Point(373, 5);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(29, 23);
+            this.btnCerrar.TabIndex = 3;
+            this.btnCerrar.Text = "X";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // labelTitleChildForm
             // 
             this.labelTitleChildForm.AutoSize = true;
@@ -211,45 +250,6 @@ namespace Presentation_Layer
             this.panelChildForm.Size = new System.Drawing.Size(405, 480);
             this.panelChildForm.TabIndex = 3;
             // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCerrar.Location = new System.Drawing.Point(373, 5);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(29, 23);
-            this.btnCerrar.TabIndex = 3;
-            this.btnCerrar.Text = "X";
-            this.btnCerrar.UseVisualStyleBackColor = true;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // btnMaximizar
-            // 
-            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximizar.FlatAppearance.BorderSize = 0;
-            this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnMaximizar.Location = new System.Drawing.Point(338, 5);
-            this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(29, 23);
-            this.btnMaximizar.TabIndex = 4;
-            this.btnMaximizar.Text = "■";
-            this.btnMaximizar.UseVisualStyleBackColor = true;
-            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
-            // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimizar.FlatAppearance.BorderSize = 0;
-            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnMinimizar.Location = new System.Drawing.Point(303, 5);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(29, 23);
-            this.btnMinimizar.TabIndex = 5;
-            this.btnMinimizar.Text = "_";
-            this.btnMinimizar.UseVisualStyleBackColor = true;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,6 +260,7 @@ namespace Presentation_Layer
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelIzquierdo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainMenu";
             this.Text = "Contact Book";
             this.Load += new System.EventHandler(this.MainMenu_Load);
